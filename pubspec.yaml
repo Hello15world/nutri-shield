@@ -1,0 +1,79 @@
+name: nutrishield1
+description: "A new Flutter project."
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.7
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ML & Image
+  tflite_flutter:
+    git:
+      url: https://github.com/tensorflow/flutter-tflite.git
+      ref: main
+  image: ^4.1.7
+  image_picker: ^1.0.7
+
+  # UI & Icons
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.1.0
+
+  # Firebase
+  firebase_core: ^4.4.0
+  firebase_auth: ^6.1.4
+  firebase_database: ^12.1.2
+  cloud_firestore: ^6.1.2
+  shared_preferences: ^2.0.15
+
+  # Google Maps & Location
+  google_maps_flutter: ^2.6.0
+  geolocator: ^13.0.1
+  flutter_google_places_sdk: ^0.4.0
+  geocoding: ^4.0.0
+  google_vision: ^1.2.1
+
+  # Routing & Navigation
+  flutter_polyline_points: ^2.0.0
+
+  # Networking & External Apps
+  http: ^1.2.0
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  # ✅ ASSETS
+  assets:
+    - assets/images/bg_pattern.jpg
+    - assets/images/blob.png
+    - assets/images/girl.png
+    - assets/images/apple_model.tflite # freshness model
+    - assets/images/organic_model.tflite # organicity model  ← add this
+
+  # ✅ LOCAL FONT (Playfair Display)
+  fonts:
+    - family: PlayfairDisplay
+      fonts:
+        - asset: assets/fonts/PlayfairDisplay-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/PlayfairDisplay-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/PlayfairDisplay-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Ubuntu-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Ubuntu-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Ubuntu-Bold.ttf
+          weight: 700
